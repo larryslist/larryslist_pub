@@ -62,7 +62,7 @@ def checkout_preview(context, request):
 
     redirect_params = {
         "amount": formatCurrency(unicode(payment.amount))
-        ,"currency": "EUR"
+        ,"currency": "USD"
         ,"lang":'en_US'
         ,"cartId" : payment.paymentRef
         ,"M_shopperReference" : payment.shopperRef

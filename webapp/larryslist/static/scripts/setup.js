@@ -123,7 +123,7 @@
                 return new Date(parts[fmt.yyyy], parts[fmt.mm]-1, parts[fmt.dd], parts[fmt.HH]||0, parts[fmt.MM]||0, parts[fmt.SS]||0);
             }
             , formatCurrency: function(num, currency){
-                if(LOCALE=='de'){
+                if(LOCALE=='us'){
                     return hnc.formatNumber(num)+" "+CURRENCY[currency];
                 } else {
                     return CURRENCY[currency]+" "+hnc.formatNumber(num);
@@ -131,7 +131,7 @@
             }
             , formatNumber: function(num, dec){
                 var val = num.toFixed(dec||2);
-                if(LOCALE=='de')
+                if(LOCALE=='us')
                     return val.replace(/\./g, DECSEP);
                 else
                     return val;

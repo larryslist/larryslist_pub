@@ -28,10 +28,10 @@ PROCESS_GROUPS = {
 CLEAN_SESSIONS = False
 
 CREATE_CMDS = {
-    'dev':"git clone git@github.com:HarryMcCarney/LarrysList.git ."
-    , 'demo':"git clone git@github.com:HarryMcCarney/LarrysList.git ."
-#    , 'live':"git clone git@github.com:HarryMcCarney/LarrysList.git ."
-    , 'live':"git clone git@github.com:gymondo/LarrysList.git ."
+    'dev':"git clone git@github.com:MartinPeschke/larryslist_pub.git ."
+    , 'demo':"git clone git@github.com:MartinPeschke/larryslist_pub.git ."
+#    , 'live':"git clone git@github.com:MartinPeschke/larryslist_pub.git ."
+    , 'live':"git clone git@github.com:MartinPeschke/larryslist_pub.git ."
 }
 
 

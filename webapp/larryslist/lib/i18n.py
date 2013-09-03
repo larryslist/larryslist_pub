@@ -14,7 +14,7 @@ MEASURES = {"METRIC": {'m':"m", 'sqm':'m<sup>2</sup>', 'mins':'mins'}
 def getMeasures(key, metric_unit='m'):
     return MEASURES[key][metric_unit]
 
-default_currency = '&36;'
+default_currency = '&#36;'
 
 def get_locale(request):
     return request._LOCALE_

@@ -26,11 +26,11 @@ class PaymentOptionModel(Mapping):
     def getCredits(self):
         return self.credit
     def getFormattedPrice(self, request):
-        return i18n.format_currency(self.price / 100, 'EUR', request)
+        return i18n.format_currency(self.price / 100, 'USD', request)
     def getSavedAmount(self, request):
-        return i18n.format_currency(10 * self.credit - self.price / 100, 'EUR', request)
+        return i18n.format_currency(10 * self.credit - self.price / 100, 'USD', request)
     def getPerCreditAmount(self, request):
-        return i18n.format_currency(int(self.price / 100 / self.credit), 'EUR', request)
+        return i18n.format_currency(int(self.price / 100 / self.credit), 'USD', request)
 
 class WebsiteConfigModel(ConfigModel):
     LABEL = ['One time', 'Basic Package', 'Premium Package']
