@@ -33,7 +33,7 @@ class PaymentOptionModel(Mapping):
         return i18n.format_currency(int(self.price / 100 / self.credit), 'USD', request)
 
 class WebsiteConfigModel(ConfigModel):
-    LABEL = ['One time', 'Basic Package', 'Premium Package']
+    LABEL = ['One time', 'Basic', 'Premium']
     _PaymentOption = ListField(DictField(PaymentOptionModel), name='PaymentOption')
     @reify
     def PaymentOption(self):

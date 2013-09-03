@@ -14,7 +14,7 @@ MEASURES = {"METRIC": {'m':"m", 'sqm':'m<sup>2</sup>', 'mins':'mins'}
 def getMeasures(key, metric_unit='m'):
     return MEASURES[key][metric_unit]
 
-default_currency = '&#36;'
+default_currency = '$'
 
 def get_locale(request):
     return request._LOCALE_
@@ -37,7 +37,7 @@ def display_currency(currency, request):
     return get_currency_symbol(currency, locale=get_locale(request))
 def format_currency(number, currency, request):
     if round(number) == number:
-        return u'€{}'.format(int(number))
+        return u'${}'.format(int(number))
     else:
         fnumber = Decimal('%.2f' % number)
         return fc(fnumber, currency, locale = get_locale(request))
