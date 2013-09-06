@@ -49,7 +49,7 @@ def checkout_preview(context, request):
     settings = request.globals.website
     
     installationId="301925"
-    url="https://secure.worldpay.com/wcc/purchase"
+    url="https://secure-test.worldpay.com/wcc/purchase"
     planToken = request.session.get(PLAN_SELECTED_TOKEN)
     plan = context.config.getPaymentOption(planToken)
     payment = CreatePurchaseCreditProc(request, {'userToken':context.user.token, 'paymentOptionToken': plan.token})
@@ -70,7 +70,7 @@ def checkout_preview(context, request):
         ,"email" : payment.shopperEmail
         ,"instId" : installationId
         ,"resURL":request.fwd_url("website_checkout_result")
-        ,"testMode":"0"
+        ,"testMode":"100"
         ,"noLanguageMenu": "true"
         ,"hideCurrency": "true"
     }
