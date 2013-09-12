@@ -92,7 +92,7 @@ def payment_result(context, request):
     user = request.root.user
     if user.isAnon():
         request.fwd("website_index")
-
+    RefreshUserProfileProc(request, {'token':user.token})
     if not len(context.cart.getItems()):
         request.fwd("website_index_member")
     elif context.cart.canSpend(context.user):
