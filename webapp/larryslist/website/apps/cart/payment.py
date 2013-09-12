@@ -48,14 +48,13 @@ def checkout_preview(context, request):
     """
     settings = request.globals.website
     
-    installationId="301925"
-    url="https://secure-test.worldpay.com/wcc/purchase"
+    installationId=settings.worldpayId
+    url= settings.worldpayUrl
+
     planToken = request.session.get(PLAN_SELECTED_TOKEN)
     plan = context.config.getPaymentOption(planToken)
     payment = CreatePurchaseCreditProc(request, {'userToken':context.user.token, 'paymentOptionToken': plan.token})
-    #validator = PaymentTransaction()
-    #validator.create(context.user.token, plan.token, payment.paymentRef, payment.shopperRef, plan.credit)
-    standard_params = {}#settings.adyenParams.copy()
+    standard_params = {}
     
     formatCurrency = lambda v: v[:-2]+"."+v[-2:]
 
@@ -70,7 +69,7 @@ def checkout_preview(context, request):
         ,"email" : payment.shopperEmail
         ,"instId" : installationId
         ,"resURL":request.fwd_url("website_checkout_result")
-        ,"testMode":"100"
+        ,"testMode":settings.worldpayTestMode
         ,"noLanguageMenu": "true"
         ,"hideCurrency": "true"
     }
@@ -82,32 +81,6 @@ def checkout_preview(context, request):
         del request.session[PLAN_SELECTED_TOKEN]
     request.fwd_raw("%s?%s" % (url, urlparams))
 
-
-def checkout_handler(context, request):
-    settings = request.globals.website
-
-    planToken = request.session.get(PLAN_SELECTED_TOKEN)
-    plan = context.config.getPaymentOption(planToken)
-    payment = CreatePurchaseCreditProc(request, {'userToken':context.user.token, 'paymentOptionToken': plan.token})
-    standard_params = settings.adyenParams.copy()
-
-    redirect_params = {
-        "paymentAmount":unicode(payment.amount)
-        ,"currencyCode":payment.currency
-        ,"shopperLocale":'en_US'
-        ,'allowedMethods': 'visa,mc,amex'
-        ,"merchantReference" : payment.paymentRef
-        ,"shopperReference" : payment.shopperRef
-        ,"shopperEmail" : payment.shopperEmail
-        ,"resURL":request.fwd_url("website_checkout_result")
-    }
-
-    params = get_request_parameters(standard_params, redirect_params)
-    urlparams = '&'.join(['%s=%s' % (k, urllib.quote(v)) for k,v in params.iteritems()])
-
-    if request.session.get(PLAN_SELECTED_TOKEN):
-        del request.session[PLAN_SELECTED_TOKEN]
-    request.fwd_raw("%s?%s&merchantSig=%s" % (settings.adyenURL, urlparams, urllib.quote(get_signature(settings.adyenSecret, params))))
 
 
 def payment_result(context, request):

@@ -52,10 +52,11 @@ class WebsiteSettings(object):
         self.clientToken = settings['backendToken']
         self.gaTrackingCode= settings['ga_tracking_code']
 
-        aS = settings['adyen']
-        self.adyenSecret = aS['secret']
-        self.adyenURL = aS['url']
-        self.adyenParams = {'merchantAccount': aS['account'], 'skinCode': aS['skinCode']}
+        aS = settings['worldpay']
+        self.worldpayId = aS['installationId']
+        self.worldpayUrl = aS['url']
+        self.worldpayTestMode = aS['testMode']
+
 
 def home_url(request):
     return request.fwd_url("website_index")
