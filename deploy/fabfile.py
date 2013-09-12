@@ -21,8 +21,8 @@ SUBSITES = [
     , SubSite(location = 'reports', scripts=["setup.js"], styles=Style(['site.less'], False))
   ]
 PROCESS_GROUPS = {
-    'dev':['p1','cache']
-    ,'live':['p1','p2','cache']
+    'dev':['p1']
+    ,'live':['p1','p2']
 }
 
 CLEAN_SESSIONS = False
@@ -30,8 +30,7 @@ CLEAN_SESSIONS = False
 CREATE_CMDS = {
     'dev':"git clone git@github.com:MartinPeschke/larryslist_pub.git ."
     , 'demo':"git clone git@github.com:MartinPeschke/larryslist_pub.git ."
-#    , 'live':"git clone git@github.com:MartinPeschke/larryslist_pub.git ."
-    , 'live':"git clone git@github.com:MartinPeschke/larryslist_pub.git ."
+    , 'live':"git clone git@github.com:larryslist/larryslist_pub.git ."
 }
 
 

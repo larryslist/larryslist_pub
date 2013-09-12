@@ -368,3 +368,6 @@ larryslist/website/templates/collector/index.html
 larryslist/website/templates/collector/layout.html
 larryslist/website/templates/collector/news.html
 larryslist/website/templates/search/index.html
+larryslist/website/templates/worldpay/FOOTER.html
+larryslist/website/templates/worldpay/header.html
+larryslist/website/templates/worldpay/resultY.html
