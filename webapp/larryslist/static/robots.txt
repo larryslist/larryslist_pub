@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /privacy
+Disallow: /impressum
+Disallow: /checkout
+Disallow: /checkout/plan
+Disallow: /login
+Disallow: /terms
+Disallow: /cart
+Disallow: /search
