@@ -6,8 +6,8 @@
         <img src="${STATIC_URL}img/preferred_tape.png" class="preferred-tape"/>
     %endif
     <span class="name-label">${option.label}</span>
-    <span class="price-band">${option.getFormattedPrice(request)}</span>
-    <span class="price-quantity">${option.getCredits()} ${'credits' if option.getCredits() > 1 else 'credit'}</span>
+    <span class="price-band">${option.getRecommendedPrice(request)}</span>
+    <span class="price-quantity">${option.getRecommendedCredits(request.root.cart)} ${'credits' if option.getRecommendedCredits(request.root.cart) > 1 else 'credit'}</span>
     <ul class="unstyled">
         <li>Access to profile info</li>
         <li>All available information for 1 year</li>

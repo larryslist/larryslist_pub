@@ -13,12 +13,12 @@
 <%def name="funnel()">
     <div class="funnel-header">
 	<ul class="inline">
-               
+
 	    <li
 		%if (request.path <> "/") and (request.path in request.fwd_url("website_checkout_plan_select")):
 		 class="selected"
 		%endif
-> 
+>
 		<b>1</b>
 		%if (request.path <> "/") and (request.path in request.fwd_url("website_checkout_plan_select")):
 		<span>Choose your price plan</span>

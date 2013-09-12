@@ -52,7 +52,12 @@ def checkout_preview(context, request):
 
     planToken = request.session.get(PLAN_SELECTED_TOKEN)
     plan = context.config.getPaymentOption(planToken)
-    payment = CreatePurchaseCreditProc(request, {'userToken':context.user.token, 'paymentOptionToken': plan.token})
+
+    if plan.is_custom_qty:
+        cart = request.root.cart
+        payment = CreatePurchaseCreditProc(request, {'userToken':context.user.token, 'absoluteCredits': plan.getRecommendedCredits(cart)})
+    else:
+        payment = CreatePurchaseCreditProc(request, {'userToken':context.user.token, 'paymentOptionToken': plan.token})
     standard_params = {}
     
     formatCurrency = lambda v: v[:-2]+"."+v[-2:]

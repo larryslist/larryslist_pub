@@ -20,16 +20,6 @@ def checkout_arbiter(context, request):
         request.fwd("website_checkout")
             
 
-def checkout_plan_select(context, request):
-    if context.user.isAnon():
-        request.fwd("website_checkout_join")
-
-    handler = PaymentOptionsHandler(context, request)
-    result = handler.getForm()
-    result['options'] = context.config.getPaymentOptions()
-    return result
-
-
 def discard_saved_details(context, request):
     context.user.discardSavedDetails()
     request.fwd("website_checkout")
@@ -49,23 +39,19 @@ def straight_purchase(context, request):
         context.cart.empty()
         request.fwd("website_index_member")
 
-
-
 class CheckoutLoginHandler(FormHandler):
     forms = [JoinLoginForm, JoinSignupForm]
 
 class PaymentOptionsHandler(FormHandler):
     form = PaymentOptionsForm
-    def getForm(self):
-        result = super(PaymentOptionsHandler, self).GET()
-        result['form'] = self.form
-        result['query'] = ''
-        return result
 
     def GET(self):
-        return render_to_response("larryslist:website/templates/search/index.html", self.getForm(), self.request)
+        if self.context.user.isAnon():
+            self.request.fwd("website_checkout_join")
+        self.result['view'] = self
+        return render_to_response("larryslist:website/templates/cart/plan_select.html", self.result, self.request)
     def ajaxGET(self):
-        return render_to_response("larryslist:website/templates/cart/ajax/options.html", self.getForm(), self.request)
+        return render_to_response("larryslist:website/templates/cart/ajax/options.html", self.result, self.request)
 
 
 def save_cart(context, request):

@@ -2,48 +2,54 @@
 <%namespace file="larryslist:lib/formlib/templates/baseform.html" name="baseform"/>
 
 <%def name="content()">
-<div class="container centered cart-page">
+    <div class="container centered cart-page">
         <div class="row">
-	   ${baseform.funnel()}
-	</div>
-    <div class="row">
-        <div class="span12">
-	    <h2 class="page-title centered">Choose your price plan</h2>
-            <div class="standard-box standard-padded-box">
-                <form class="form-validated" method="post" action="${request.fwd_url("website_checkout_set_option")}">
-                    ${baseform.prelims(form)}
-                    <div class="payment-plans">
-                        %for field in form.fields:
-                            ${field.render(form.id, request, values, errors, view)|n}\
-                        %endfor
-                    </div>
-                    <div class="payment-methods">
-                        <div class="pull-right">
-                            <img src="${STATIC_URL}img/paymentmethods.png"/>
-                        </div>
-                        <div><a href="#" class="expiry-link">Will the credits expire?</a></div>
-                        <div>1 credit = 1 profile</div>
-                        <div>All purchases are final with no refunds.</div>
-                        <div>Payments can be made in HKD or USD.</div>
-                    </div>
-                </form>
+          ${baseform.funnel()}
+        </div>
+        <div class="row">
+            <div class="span12">
+           <h2 class="page-title centered">Choose your price plan</h2>
+                <div class="standard-box standard-padded-box">
+                    ${self.buildForm(view.form)}
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="modal mini popup-modal hide" id="expiry-modal">
-    <div class="modal-body">
-        <a class="close" data-dismiss="modal" aria-hidden="true">×</a>
-        <h3>Will the credits expire?</h3>
-        <p>Credits that have not been spent for downloading profiles expire one year after their purchase.</p>
-        <p>However it is very rare that you will have any credits left that you have not been able to spend in an year.</p>
-        <p>
-            <a class="btn btn-primary" data-dismiss="modal">OK</a>
-        </p>
+    <div class="modal mini popup-modal hide" id="expiry-modal">
+        <div class="modal-body">
+            <a class="close" data-dismiss="modal" aria-hidden="true">×</a>
+            <h3>Will the credits expire?</h3>
+            <p>Credits that have not been spent for downloading profiles expire one year after their purchase.</p>
+            <p>However it is very rare that you will have any credits left that you have not been able to spend in an year.</p>
+            <p>
+                <a class="btn btn-primary" data-dismiss="modal">OK</a>
+            </p>
+        </div>
     </div>
-</div>
 </%def>
+
+
+<%def name="buildForm(form)">
+    <form class="form-validated" method="post" action="${request.fwd_url("website_checkout_set_option")}">
+        ${baseform.prelims(form)}
+        <div class="payment-plans">
+            %for field in form.fields:
+                ${field.render(form.id, request, values, errors, view)|n}\
+            %endfor
+        </div>
+        <div class="payment-methods">
+            <div class="pull-right">
+                <img src="${STATIC_URL}img/paymentmethods.png"/>
+            </div>
+            <div><a href="#" class="expiry-link">Will the credits expire?</a></div>
+            <div>1 credit = 1 profile</div>
+            <div>All purchases are final with no refunds.</div>
+            <div>Payments can be made in HKD or USD.</div>
+        </div>
+    </form>
+</%def>
+
 
 <%block name="scripts">
     <script>

@@ -22,17 +22,37 @@ class PaymentOptionModel(Mapping):
     def getValue(self, request): return self.token
     def getKey(self, request): return self.token
 
+
+    @property
+    def is_custom_qty(self):
+        return self.credit == 1
+
+    def getRecommendedCredits(self, cart):
+        noProfiles = len(cart.getItems())
+        return noProfiles if noProfiles and self.is_custom_qty else self.credit
+
+    def getRecommendedPrice(self, request):
+        noProfiles = len(request.root.cart.getItems())
+        if noProfiles and self.is_custom_qty:
+            return i18n.format_currency(self.price * noProfiles / 100.0, 'USD', request)
+        else:
+            return i18n.format_currency(self.price / 100, 'USD', request)
+
+
     def getCredits(self):
         return self.credit
     def getFormattedPrice(self, request):
         return i18n.format_currency(self.price / 100, 'USD', request)
+
+
+
     def getSavedAmount(self, request):
         return i18n.format_currency(10 * self.credit - self.price / 100, 'USD', request)
     def getPerCreditAmount(self, request):
         return i18n.format_currency(int(self.price / 100 / self.credit), 'USD', request)
 
 class WebsiteConfigModel(ConfigModel):
-    LABEL = ['One time', 'Basic', 'Premium']
+    LABEL = ['One at a time', 'Basic', 'Premium']
     _PaymentOption = ListField(DictField(PaymentOptionModel), name='PaymentOption')
     @reify
     def PaymentOption(self):

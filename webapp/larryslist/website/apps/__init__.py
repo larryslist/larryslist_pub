@@ -29,7 +29,7 @@ ROUTE_LIST = [
     , FunctionRoute ("website_purchase"             , "/purchase", contexts.WebsiteRootContext, cart.straight_purchase, None)
     , FunctionRoute ("website_checkout_arbiter"     , "/checkout/arbiter", contexts.WebsiteRootContext, cart.checkout_arbiter, None)
     , ClassRoute    ("website_checkout_join"        , "/checkout/join", contexts.WebsiteAnonOnlyContext, cart.CheckoutLoginHandler, "cart/login.html", view_attrs=JSON_FORM_ATTRS)
-    , FunctionRoute ("website_checkout_plan_select" , "/checkout/plan", contexts.WebsiteRootContext, cart.checkout_plan_select, "cart/plan_select.html")
+    , ClassRoute    ("website_checkout_plan_select" , "/checkout/plan", contexts.WebsiteRootContext, cart.PaymentOptionsHandler, view_attrs=JSON_FORM_ATTRS)
     , ClassRoute    ("website_checkout_set_option"  , "/checkout/option", contexts.WebsiteRootContext, cart.PaymentOptionsHandler, None, view_attrs=JSON_FORM_ATTRS)
     , FunctionRoute ("website_discard_saved_details", "/checkout/discard", contexts.WebsiteRootContext, cart.discard_saved_details, None)
 
