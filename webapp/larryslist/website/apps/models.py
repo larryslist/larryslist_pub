@@ -16,12 +16,15 @@ class PaymentOptionModel(Mapping):
     credit = IntegerField()
     price = IntegerField()
     token = TextField()
-    preferred = BooleanField()
+    #preferred = BooleanField()
     label = TextField()
 
     def getValue(self, request): return self.token
     def getKey(self, request): return self.token
 
+    @property
+    def preferred(self):
+        return self.credit == 25
 
     @property
     def is_custom_qty(self):
@@ -52,7 +55,7 @@ class PaymentOptionModel(Mapping):
         return i18n.format_currency(int(self.price / 100 / self.credit), 'USD', request)
 
 class WebsiteConfigModel(ConfigModel):
-    LABEL = ['One at a time', 'Basic', 'Premium']
+    LABEL = ['Per Profile', 'Basic', 'Premium']
     _PaymentOption = ListField(DictField(PaymentOptionModel), name='PaymentOption')
     @reify
     def PaymentOption(self):
