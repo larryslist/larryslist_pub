@@ -3,12 +3,11 @@ from datetime import datetime, timedelta
 import hashlib
 import hmac
 import urllib
-from larryslist.lib.baseviews import GenericErrorMessage, GenericSuccessMessage
-from larryslist.website.apps.cart import PLAN_SELECTED_TOKEN
 import logging
-from larryslist.website.apps.models import CreatePurchaseCreditProc, CheckPurchaseCreditProc, RefreshUserProfileProc, SpendCreditProc, \
-                                        PaymentTransaction, UserCredits
-from pyramid.renderers import render_to_response
+
+from larryslist.website.apps.cart import PLAN_SELECTED_TOKEN
+from larryslist.website.apps.models import CreatePurchaseCreditProc, CheckPurchaseCreditProc, RefreshUserProfileProc
+
 
 log = logging.getLogger(__name__)
 

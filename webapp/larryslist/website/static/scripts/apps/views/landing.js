@@ -48,7 +48,6 @@ define(["tools/ajax", "tools/abstractsearch", "text!templates/taresult.html"], f
                     view.$query.prev(".key").attr("name", term.getKey()).val(term.get('value'));
                     view.current = term;
                     view.$query.closest(".control-group").removeClass("error");
-
                 });
                 this.search.on('extraItemSelected unknownterm:selected unknownterm:metaSelected', function(termname){
                     view.current=null;
@@ -86,6 +85,11 @@ define(["tools/ajax", "tools/abstractsearch", "text!templates/taresult.html"], f
                 var v = this.typeaheads[i];
                 v.search.hide();
                 submittable = submittable || !!v.current;
+                if(v.$query.val() && !v.current) {
+                    v.$query.closest(".control-group").addClass("error")
+                } else {
+                    v.$query.closest(".control-group").removeClass("error")
+                }
             }
             return submittable;
         }
