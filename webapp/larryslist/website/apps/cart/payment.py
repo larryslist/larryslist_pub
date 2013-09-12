@@ -4,6 +4,7 @@ import hashlib
 import hmac
 import urllib
 import logging
+from larryslist.lib.baseviews import GenericErrorMessage
 
 from larryslist.website.apps.cart import PLAN_SELECTED_TOKEN
 from larryslist.website.apps.models import CreatePurchaseCreditProc, CheckPurchaseCreditProc, RefreshUserProfileProc
@@ -91,10 +92,23 @@ def payment_result(context, request):
     user = request.root.user
     if user.isAnon():
         request.fwd("website_index")
-    RefreshUserProfileProc(request, {'token':user.token})
-    request.fwd("website_index_member", _query= [('payment', 'done')])
+
+    if not len(context.cart.getItems()):
+        request.fwd("website_index_member")
+    elif context.cart.canSpend(context.user):
+        values = {'token': context.user.token, 'Collector':[{'id': c.id} for c in context.cart.getCollectors()]}
+        context.cart.empty()
+        if request.session.get(PLAN_SELECTED_TOKEN):
+            del request.session[PLAN_SELECTED_TOKEN]
+        request.fwd("website_index_member")
+    else:
+        request.session.flash(GenericErrorMessage("Not enough credits to purchase all profiles."), "generic_messages")
+        request.fwd("website_cart")
+
+
 
 def payment_result_handler(context, request):
     log.info( 'PAYMENT RETURN from External: %s' , dict(request.params) )
     result = CheckPurchaseCreditProc( request, dict(request.params) )
     return {}
+
