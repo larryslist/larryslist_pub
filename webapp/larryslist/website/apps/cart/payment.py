@@ -67,7 +67,7 @@ def checkout_preview(context, request):
     redirect_params = {
         "amount": formatCurrency(unicode(payment.amount))
         ,"currency": "USD"
-        ,"lang":'en_US'
+        ,"lang":'en-US'
         ,"cartId" : payment.paymentRef
         ,"M_shopperReference" : payment.shopperRef
         ,"M_planToken" : request.session.get(PLAN_SELECTED_TOKEN)
