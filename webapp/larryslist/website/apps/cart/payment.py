@@ -7,7 +7,7 @@ import logging
 from larryslist.lib.baseviews import GenericErrorMessage
 
 from larryslist.website.apps.cart import PLAN_SELECTED_TOKEN
-from larryslist.website.apps.models import CreatePurchaseCreditProc, CheckPurchaseCreditProc, RefreshUserProfileProc
+from larryslist.website.apps.models import CreatePurchaseCreditProc, CheckPurchaseCreditProc, RefreshUserProfileProc, SpendCreditProc
 
 
 log = logging.getLogger(__name__)
@@ -97,6 +97,7 @@ def payment_result(context, request):
         request.fwd("website_index_member")
     elif context.cart.canSpend(context.user):
         values = {'token': context.user.token, 'Collector':[{'id': c.id} for c in context.cart.getCollectors()]}
+        SpendCreditProc(request, values)
         context.cart.empty()
         if request.session.get(PLAN_SELECTED_TOKEN):
             del request.session[PLAN_SELECTED_TOKEN]
