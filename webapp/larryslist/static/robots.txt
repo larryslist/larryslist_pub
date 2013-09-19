@@ -1,3 +1,4 @@
+Sitemap: http://www.larryslist.com/sitemap.xml
 User-agent: *
 Disallow: /privacy
 Disallow: /impressum

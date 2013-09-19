@@ -1,9 +1,281 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>http://www.larryslist.com/</loc>
-        <changefreq>daily</changefreq>
-        <priority>1</priority>
-    </url>
-</urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://www.larryslist.com/</loc>
+  <changefreq>daily</changefreq>
+  <priority>1</priority>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/art-collector-report</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/faq</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/careers</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/press</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/contact</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/jong-won-kim</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/yang-jiawei</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/tetsuyuki-oishi</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-101</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/deddy-kusuma</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/david-glasser</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/tobias-gombert</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/joao-carlos-de-figueiredo-ferraz</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/ivo-martins</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/david-trabulsi</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/daniel-benoit</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/marcelo-secaf</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-report</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/assets/Larrys-List-Press-Release.pdf</loc>
+  <lastmod>2013-09-18T13:48:24+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-101/how-abstract-expressionism-revolutionized-the-art-world</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-101/what-to-wear-to-a-vernissage</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-101/a-beginners-guide-to-art-fairs</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-101/ten-galleries-you-need-to-know</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-101/minimalism-a-perfect-mixture-between-art-and-design</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-101/how-to-behave-at-an-art-auction-the-dos-and-donts</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-101/everything-you-need-to-know-about-art-auctions</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-101/a-brief-introduction-to-pop-art</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-art-in-toronto</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-art-in-singapore</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-art-of-sao-paulo</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-art-in-san-francisco</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-art-in-rome</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-art-in-milan</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-arts-in-miami</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-arts-in-houston</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/arts-museums-and-art-collectors-of-boston</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-art-in-barcelona</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/syakieb-sungkar</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/hiroko-ishinabe</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/amarjeet-vidyarthi</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/john-arnold</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/stephen-a-wynn</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/alexandra-and-steven-a-cohen</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/david-martinez</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/christine-and-andrew-hall</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/peter-simon</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/francois-pinault</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-art-in-paris</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-art-in-new-york-city</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-art-in-washington-dc</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-art-in-los-angeles</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-art-in-chicago</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-art-in-berlin</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-art-in-madrid</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-cities/fine-art-in-london</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/mary-and-john-pappajohn</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/carlos-slim-helu</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/david-thomson</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/carlos-and-rosa-de-la-cruz</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/andrew-lloyd-webber</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/paul-allen</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/joe-lewis</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/damien-hirst</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.larryslist.com/artmarket/art-collector-interview/charles-and-helen-schwab</loc>
+  <changefreq>daily</changefreq>
+</url>
+</urlset>?xml version="1.0" encoding="utf-8"?>
