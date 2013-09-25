@@ -135,7 +135,10 @@ larryslist/reports/templates/base.html
 larryslist/reports/templates/layout.html
 larryslist/reports/templates/reports.html
 larryslist/reports/templates/user_actions.html
+larryslist/static/502.html
 larryslist/static/channel.html
+larryslist/static/robots.txt
+larryslist/static/sitemap.xml
 larryslist/static/img/ajax-loader-light.gif
 larryslist/static/img/ajax-loader.gif
 larryslist/static/img/favicon.ico
@@ -304,6 +307,11 @@ larryslist/website/static/img/nopic-128px.png
 larryslist/website/static/img/nopic-83px.png
 larryslist/website/static/img/paymentmethods.png
 larryslist/website/static/img/preferred_tape.png
+larryslist/website/static/img/press_artinfo.jpg
+larryslist/website/static/img/press_artmarketmonitor.jpg
+larryslist/website/static/img/press_bloomberg.jpg
+larryslist/website/static/img/press_chicagotribune.jpg
+larryslist/website/static/img/press_forbes.jpg
 larryslist/website/static/img/social_media.png
 larryslist/website/static/img/sprites.png
 larryslist/website/static/img/tabactive.png
@@ -345,7 +353,6 @@ larryslist/website/static/scripts/apps/views/collectors_mini.js
 larryslist/website/static/scripts/apps/views/landing.js
 larryslist/website/static/scripts/apps/views/password.js
 larryslist/website/static/scripts/apps/views/recommendation.js
-larryslist/website/static/scripts/apps/views/search (copy).js
 larryslist/website/static/scripts/apps/views/search.js
 larryslist/website/static/scripts/apps/views/signup.js
 larryslist/website/templates/base.html
@@ -368,6 +375,3 @@ larryslist/website/templates/collector/index.html
 larryslist/website/templates/collector/layout.html
 larryslist/website/templates/collector/news.html
 larryslist/website/templates/search/index.html
-larryslist/website/templates/worldpay/FOOTER.html
-larryslist/website/templates/worldpay/header.html
-larryslist/website/templates/worldpay/resultY.html
